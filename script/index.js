@@ -9,21 +9,23 @@ cite.innerHTML="RAJ"
 
 const url = "https://goquotes-api.herokuapp.com/api/v1/all/quotes"
 
-const quotes = async (url) =>{
-    const respone = await fetch(url)
-    const allquotes = await respone.json()
-    return allquotes
-}
+// const quotes =  (url) =>{
+//     fetch(url).then(respon => respon.json())
+//     // // const allquotes = await respone.json()
+//     // return respone
+// }
 
 // let quote = quotes(url)
 // quote.then(data => console.log(data))
 
 function handle(){
     let count,random,quote
-    quotes(url)
+    fetch(url)
+    .then(respone => respone.json())
     .then((data)=>{
         count = data.count;
         random = Math.round(Math.random() * count)
+        console.log(random)
         quote = data.quotes[random]
         blockquote.innerHTML = quote.text
         cite.innerHTML = quote.author
