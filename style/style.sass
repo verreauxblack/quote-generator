@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap')
+    
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    position: relative
+
+
+section
+    width: 100vw
+    height: 100vh
+    display: flex
+    justify-content: center
+    align-items: center
+    background: #bbab9b
+main
+    width: 400px
+    height: fit-content
+    padding: 30px
+    // border: 2px solid black
+    border-radius: 30px
+    background: #4f3222
+    box-shadow: 10px 10px 107px 7px rgba(0,0,0,0.46)
+    -webkit-box-shadow: 10px 10px 107px 7px rgba(0,0,0,0.46)
+    -moz-box-shadow: 10px 10px 107px 7px rgba(0,0,0,0.46)
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-direction: column
+
+aside
+    width: 100%
+    height: max-content
+    color: #d4ac6e
+
+
+blockquote
+    width: 100%
+    height: max-content
+    font-size: 1.5rem
+    padding: 0 10px
+    &::after,&::before
+        content: '\"'
+        color: #8b6f47
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+
+div
+    width: 100%
+    text-align: right
+    padding-right: 20px
+
+cite:before
+    content: "- "
+
+button
+    width: 100px
+    height: 35px
+    border-radius: 40px
+    &:hover
+        background: #bbab9b
+        color: white
+        border-color: white 
+
+
+
+@media screen and ( max-width: 400px )
+    main
+        width: 300px
+        padding: 30px 10px
+        border-radius: 10px
+    div
+        padding: 20px 10px
+        // height: 400px
+    
